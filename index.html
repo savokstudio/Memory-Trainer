@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Memory Trainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="card">
+
+  <!-- Upgrade Button -->
+  <div class="upgrade-container">
+    <button id="upgrade-btn" class="upgrade-btn">Upgrade</button>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <label class="toggle-label">
+      Dark Mode
+      <label class="switch">
+        <input type="checkbox" id="theme-switch">
+        <span class="slider"></span>
+      </label>
+    </label>
+  </div>
+
+  <!-- Streak + Daily Display -->
+<div id="streakContainer" class="streak-container">
+  <span id="streakLabel">Streak:</span>
+  <span id="streakValue">0</span>
+</div>
+
+
+
+  <!-- Code Display -->
+  <div id="code-display" class="code-display">
+    Click "Start" to see a code.
+  </div>
+
+  <!-- User Input -->
+  <input
+    id="user-input"
+    class="input"
+    type="text"
+    maxlength="6"
+    placeholder="Enter the code here"
+    disabled
+  />
+
+ <!-- Difficulty Selector -->
+<div class="difficulty">
+  <label for="difficultySelect">Difficulty:</label>
+  <select id="difficultySelect" class="input">
+    <option value="6">6 digits (Free)</option>
+    <option value="8" class="locked-option">8 digits (Trial) 🔒</option>
+    <option value="10" class="locked-option">10 digits (Trial) 🔒</option>
+  </select>
+</div>
+
+
+
+  <!-- Trials Left -->
+  <div id="trials-left" class="trials-left"></div>
+
+  <!-- Watch Ad Button -->
+  <button id="watch-ad-btn" class="watch-ad-btn hidden">Watch Ad for 1 More Play</button>
+
+  <!-- Start + Submit Buttons -->
+<div class="buttons">
+  <button id="startBtn" class="btn primary">Start</button>
+  <button id="submitBtn" class="btn" disabled>Submit</button>
+</div>
+
+<!-- Message -->
+<div id="message" class="message"></div>
+
+
+
+<!-- Upgrade Modal -->
+<div id="upgrade-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 class="modal-title">Upgrade to Premium</h2>
+
+    <ul class="premium-features">
+      <li>Unlimited 8‑digit mode</li>
+      <li>Unlimited 10‑digit mode</li>
+      <li>Dark Mode</li>
+      <li>Remove ads</li>
+      <li>Future premium themes</li>
+      <li>Streak Freeze (coming soon)</li>
+    </ul>
+
+    <button id="purchase-btn" class="purchase-btn">Unlock Premium</button>
+    <button id="close-modal" class="close-btn">Close</button>
+  </div>
+</div>
+
+<!-- Ad Modal -->
+<div id="ad-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2 class="modal-title">Watch Ad</h2>
+    <p id="ad-countdown">Your ad is loading...</p>
+    <button id="close-ad-btn" class="close-btn hidden">Close</button>
+  </div>
+</div>
+
+<!-- Premium Purchase Modal -->
+<div id="premiumModal" class="modal hidden">
+  <div class="modal-content premium-box">
+    <h2 class="premium-title">Unlock Premium</h2>
+    <p class="premium-subtitle">Choose the option that fits your ritual</p>
+
+    <div class="premium-options">
+
+      <!-- Monthly Subscription -->
+      <button id="monthlyBtn" class="premium-option">
+        <div class="option-main">
+          <span class="option-title">Monthly Access</span>
+          <span class="option-price">$3.99 / month</span>
+        </div>
+        <div class="option-note">Cancel anytime</div>
+      </button>
+
+      <!-- Lifetime Purchase -->
+      <button id="lifetimeBtn" class="premium-option best-value">
+        <div class="option-main">
+          <span class="option-title">Lifetime Access</span>
+          <span class="option-price">$9.99 one-time</span>
+        </div>
+        <div class="option-note">Best value</div>
+      </button>
+
+    </div>
+
+    <button id="closePremium" class="close-btn">Not now</button>
+  </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
